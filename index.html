@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
-  <title>A Fresh Start</title>
+    <title>A Fresh Start</title>
 </head>
+
 <body>
+    <!-- Create Form Part -->
+    <div class="req-form">
+        <form action="form" method="POST">
+            <label>Name</label>
+            <input type="text" class="form-input_box_name">
+            <label>Phone</label>
+            <input type="number" class="form-input_box_phone">
+            <label>Email Address</label>
+            <input type="email" class="form-input_box_email">
+            <label>Task</label>
+            <textarea class="form-input_box_txt" maxlength="400"></textarea>
+            <label>Budget</label>
+            <input type="text" class="form-input_box_btn-budget">
+            <label for="cars">How did you know about us?</label>
 
+            <select class="form-selec_box">
+              <option >Select one...</option>
+              <option value="Behance">Behance</option>
+              <option value="Webfolw">Webfolw</option>
+              <option value="Clutch">Clutch</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Linkedin">Facebook</option>
+              <option value="Awwwards">Awwwards</option>
+              <option value="vc.ru">vc.ru</option>
+            </select>
+            <button class="form-btn-send">send</button>
+        </form>
+    </div>
 
-  
-  <!-- my scripts -->
-  <script src="./js/script.js"></script>
+    <!-- my scripts -->
+    <script src="./js/script.js"></script>
 </body>
+
 </html>

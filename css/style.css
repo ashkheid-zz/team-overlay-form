@@ -5,3 +5,22 @@
 @import url(./_state.css);
 @import url(./_theme.css);
 @import url(./_shame.css);
+.req-form {
+    display: flex;
+    justify-content: center;
+}
+
+.req-form form {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    height: 1024px;
+    border: 1px solid black;
+}
+
+.form-input_box_name,
+.form-input_box_phone,
+.form-input_box_email,
+.form-input_box_txt,
+.form-input_box_btn-budget,
+.form-select_box {}
