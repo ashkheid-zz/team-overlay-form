@@ -33,3 +33,23 @@
   color: gray;
 }
 
+
+.req-form__select-group input {
+  display: none;
+}
+
+.req-form__select-group label {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.req-form__select-group input:checked + label {
+  color: white;
+  background-color: black;
+}
+
+.req-form__select-group input:hover + label {
+  padding: 9px;
+  border-width: 2px;
+}
