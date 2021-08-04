@@ -1,0 +1,13 @@
+.form-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  top: 2vh;
+
+  /*----test----*/
+  background-color: antiquewhite;
+}
