@@ -1,48 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>A Fresh Start</title>
-</head>
+  </head>
 
-<body>
-    <!-- Create Form Part -->
-    <div class="req-form">
-        <form action="form" method="POST">
-            <label>Name</label>
-            <input type="text" class="form-input_box_name">
-            <label>Phone</label>
-            <input type="number" class="form-input_box_phone">
-            <label>Email Address</label>
-            <input type="email" class="form-input_box_email">
-            <label>Task</label>
-            <textarea class="form-input_box_txt" maxlength="400"></textarea>
-            <label>Budget</label>
-            <input type="text" class="form-input_box_btn-budget">
-            <label for="cars">How did you know about us?</label>
+  <body>
+    <div class="form-container">
+      <form action="/action_page.php" method="POST" class="req-form">
+        <span class="req-form__close">&times;</span>
 
-            <select class="form-selec_box">
-              <option >Select one...</option>
-              <option value="Behance">Behance</option>
-              <option value="Webfolw">Webfolw</option>
-              <option value="Clutch">Clutch</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Linkedin">Facebook</option>
-              <option value="Awwwards">Awwwards</option>
-              <option value="vc.ru">vc.ru</option>
-            </select>
-            <button class="form-btn-send">send</button>
-        </form>
+        <div class="req-form__full-name">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="Enter your name&hellip;"
+            autofocus
+          />
+        </div>
+
+        <div class="req-form__phone">
+          <label for="phone">Phone</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number&hellip;"
+          />
+        </div>
+
+        <div class="req-form__email">
+          <label for="email">Email Address</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter your email&hellip;"
+            required
+          />
+        </div>
+
+        <div class="req-form__message">
+          <label for="message" class="req-form__message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message to us&hellip;"
+            rows="5"
+            maxlength="400"
+          ></textarea>
+        </div>
+
+        <div class="req-form__budget">
+          <p class="req-form__input-label">Budget</p>
+          <div class="req-form__select-group">
+            <input
+              type="radio"
+              id="budgetChoice1"
+              name="budget"
+              value="$6k to $10k"
+              checked
+            />
+            <label for="budgetChoice1">$6k - $10k</label>
+            <input
+              type="radio"
+              id="budgetChoice2"
+              name="budget"
+              value="$10k to $20k"
+            />
+            <label for="budgetChoice2">$10k - $20k</label>
+            <input
+              type="radio"
+              id="budgetChoice3"
+              name="budget"
+              value="over $20k"
+            />
+            <label for="budgetChoice3">over $20k</label>
+          </div>
+        </div>
+
+        <div class="req-form__newcomers">
+          <label for="newcomers">How did you know about us?</label>
+          <select id="newcomers" name="comesFrom">
+            <option value="" class="req-form__placeholder" selected>
+              Select one&hellip;
+            </option>
+            <option value="behance">Behance</option>
+            <option value="webfolw">Webfolw</option>
+            <option value="clutch">Clutch</option>
+            <option value="facebook">Facebook</option>
+            <option value="linkedin">Linkedin</option>
+            <option value="awwwards">Awwwards</option>
+            <option value="vc.ru">vc.ru</option>
+            <option value="google">Google</option>
+            <option value="catalog">Industry ratings and catalogs</option>
+            <option value="recommend">Recommendation</option>
+            <option value="other">Other&hellip;</option>
+          </select>
+        </div>
+
+        <input type="submit" value="Send" class="req-form__submit-btn" />
+      </form>
     </div>
 
     <!-- my scripts -->
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
