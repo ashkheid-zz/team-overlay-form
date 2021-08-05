@@ -5,7 +5,7 @@
 @import url(./_state.css);
 @import url(./_theme.css);
 @import url(./_shame.css);
-body {
+/*body {
     background-color: rgb(219 222 222);
 }
 
@@ -108,4 +108,4 @@ body {
 #navigation-request {
     border-bottom: solid 2px black;
     transition: 1s;
-}
+}*/
