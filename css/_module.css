@@ -1,0 +1,57 @@
+.req-form {
+  padding: 15px;
+}
+
+.req-form__phone,
+.req-form__email,
+.req-form__message,
+.req-form__budget,
+.req-form__newcomers,
+.req-form__submit-btn {
+  margin-top: 20px;
+}
+
+.req-form__close,
+.req-form__full-name > *,
+.req-form__phone > *,
+.req-form__email > *,
+.req-form__message > *,
+.req-form__budget,
+.req-form__newcomers > *,
+.req-form__submit-btn {
+  display: block;
+  width: 100%;
+
+  padding-block: 7px;
+}
+
+.req-form__close {
+  text-align: right;
+}
+
+.req-form *::placeholder {
+  color: gray;
+}
+
+
+.req-form__select-group input {
+  display: none;
+}
+
+.req-form__select-group label {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.req-form__select-group input:checked + label {
+  color: white;
+  background-color: black;
+}
+
+.req-form__select-group input:hover + label {
+  padding: 9px;
+  border-width: 2px;
+}
