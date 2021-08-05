@@ -5,17 +5,37 @@
 @import url(./_state.css);
 @import url(./_theme.css);
 @import url(./_shame.css);
+body {
+    background-color: rgb(219 222 222);
+}
+
 .req-form {
     display: flex;
     justify-content: center;
+    transition: 1s;
+    transform: scale(180deg);
+}
+
+.form-close-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.req-form img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .req-form form {
     display: flex;
     flex-direction: column;
-    width: 560px;
-    height: 1024px;
-    border: 1px solid black;
+    width: 450px;
+    height: 600px;
+    box-shadow: 1px 3px 13px rgba(160, 161, 160, 0.5);
+    background: rgb(255, 255, 255);
+    z-index: 1;
 }
 
 .form-input_box_name,
@@ -23,4 +43,69 @@
 .form-input_box_email,
 .form-input_box_txt,
 .form-input_box_btn-budget,
-.form-select_box {}
+.form-select_box,
+.form-btn-send {
+    width: 360px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: 1px black solid;
+    border-radius: 3px;
+    font-family: poppins;
+    padding: 10px;
+}
+
+.form-input_box_txt {
+    height: 80px;
+}
+
+.req-form label {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.form-btn-send {
+    color: white;
+    background-color: black;
+}
+
+.titel {
+    position: absolute;
+    z-index: 0;
+    top: 30%;
+    left: 15%;
+    width: 654px;
+    text-align: center;
+}
+
+.titel h1 {
+    font-size: 3em;
+}
+
+.titel h5 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.navigation {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.navigation ul {
+    display: flex;
+    width: 600px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.navigation li:hover {
+    cursor: pointer;
+    border-bottom: solid 2px black;
+}
+
+#navigation-request {
+    border-bottom: solid 2px black;
+    transition: 1s;
+}
