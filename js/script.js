@@ -77,7 +77,9 @@ function validateForm(string) {
             return false;
         }
     }
-    alert('فرم شما ارسال شد');
+    setTimeout(() => {
+        alert('Hello, Mr. Universe!');
+    }, 5000);
     return true;
 
 
@@ -96,3 +98,13 @@ function ChangeColor(string) {
     }
 
 }
+
+//exit of form with press ESC
+document.addEventListener('keyup', function(e) {
+    e.preventDefault();
+
+    if (e.keyCode == 27) { // 13 is unicode for "Enter" key
+        document.getElementById("form").style.display = "none";
+
+    }
+});
