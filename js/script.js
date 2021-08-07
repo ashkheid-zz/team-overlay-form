@@ -8,6 +8,17 @@ function test() {
     // emailInput.pattern = regEx;
 }
 
+
+// function emailValidate(form, email) {
+//     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+//     var address = document.forms[form].elements[email].value;
+//     if (reg.test(address) == false) {
+//         alert('آدرس ایمیل وارد شده نامعتبر است');
+//         return false;
+//     }
+// }
+
+
 window.onload = test();
 
 
@@ -25,13 +36,25 @@ function hide() {
 
 
 
-
-function validateForm() {
+//this funcation check our input boxs validation
+function validateForm(string) {
+    //array spam name
+    validChar = ["spam", "jerk", "trumpt", "سوسک", "دوشواری"];
+    //input box value
+    strlen = string.length;
+    //length of our array
+    arrlen = validChar.length;
+    //get input boxes value
+    var block = document.getElementById("fullname");
     var fieldName = document.forms["form"]["fullname"].value;
     var fieldPhone = document.forms["form"]["phone"].value;
     var fieldMessage = document.forms["form"]["message"].value;
+    //end of get our input boxes value***********************
+    //check value of input boxes
+
     if (fieldName == null || fieldName == "") {
         alert("فیلد نام نباید خالی باشد");
+        block.style.borderColor = "red";
         return false;
     } else if (fieldPhone == null || fieldPhone == "") {
         alert("فیلد تلفن نباید خالی باشد");
@@ -40,7 +63,36 @@ function validateForm() {
         alert("فیلد متن نباید خالی باشد");
         return false;
     }
+    if (strlen <= 1) {
+
+        alert('لطفا یک عبارت معتبر وارد کنید');
+        block.style.borderColor = "red";
+        return false;
+    }
+    //invalid name part
+    for (i = 0; i < arrlen; i++) {
+        if (validChar[i] == string) {
+            alert("شما مجاز به استفاده از این نام نیستید");
+            block.style.borderColor = "red";
+            return false;
+        }
+    }
+    alert('فرم شما ارسال شد');
+    return true;
 
 
+}
+
+
+
+//change color of imput boxes
+function ChangeColor(string) {
+    strlen2 = string.length;
+    console.log(strlen2);
+    var block = document.getElementById('fullname');
+    if (strlen2 > 1) {
+        block.style.borderColor = "green";
+
+    }
 
 }
