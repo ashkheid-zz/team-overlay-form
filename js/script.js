@@ -29,10 +29,16 @@ function hide() {
 
 }
 
+
+
+
 // function show() {
 //     document.getElementById("form").style.display = "flex";
 
 // }
+
+
+
 
 
 
@@ -77,10 +83,28 @@ function validateForm(string) {
             return false;
         }
     }
-    setTimeout(() => {
-        alert('Hello, Mr. Universe!');
-    }, 5000);
-    return true;
+
+
+
+
+
+    var fieldName = document.forms["form"]["fullname"].value = "";
+    var fieldPhone = document.forms["form"]["phone"].value = "";
+    var fieldPhone = document.forms["form"]["email"].value = "";
+    var fieldMessage = document.forms["form"]["message"].value = "";
+
+
+
+    var check = confirm("آیا از صحت اطلاعات مطمين هستید؟");
+    console.log(check);
+    if (check == 0) {
+        return false;
+        alert("فرم ارسال نشد");
+    } else if (check == 1) {
+        document.getElementById("form").remove();
+        alert("با تشکر فرم ارسال شد");
+
+    }
 
 
 }
@@ -94,9 +118,9 @@ function ChangeColor(string) {
     var block = document.getElementById('fullname');
     if (strlen2 > 1) {
         block.style.borderColor = "green";
-
+        strlen2 = "";
     }
-
+    console.log(strlen2);
 }
 
 //exit of form with press ESC
