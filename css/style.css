@@ -1,10 +1,15 @@
-@import url(./_reset.css);
-@import url(./_base.css);
-@import url(./_layout.css);
-@import url(./_module.css);
-@import url(./_state.css);
-@import url(./_theme.css);
-@import url(./_shame.css);
+@import url(./_hamed.css);
+@import url(./_ashkan.css);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
   background-color: rgb(219 222 222);
 }
@@ -45,6 +50,90 @@ body {
 .navigation li:hover {
   cursor: pointer;
   border-bottom: solid 2px black;
+}
+
+.form-container {
+  /* display: flex; */
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2vh;
+  z-index: 999;
+
+  /*----test----*/
+  background-color: antiquewhite;
+}
+
+.req-form {
+  padding: 15px;
+}
+
+.req-form__phone,
+.req-form__email,
+.req-form__message,
+.req-form__budget,
+.req-form__newcomers,
+.req-form__submit-btn {
+  margin-top: 20px;
+}
+
+.req-form__close,
+.req-form__full-name > *,
+.req-form__phone > *,
+.req-form__email > *,
+.req-form__message > *,
+.req-form__budget,
+.req-form__newcomers > *,
+.req-form__submit-btn {
+  display: block;
+  width: 100%;
+  padding-block: 7px;
+}
+
+.req-form__close {
+  text-align: right;
+}
+
+.req-form *::placeholder {
+  color: gray;
+}
+
+.req-form__select-group input {
+  display: none;
+}
+
+.req-form__select-group label {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.req-form__select-group input:checked + label {
+  color: white;
+  background-color: black;
+}
+
+.req-form__select-group input:hover + label {
+  padding: 9px;
+  border-width: 2px;
+}
+
+input:invalid {
+  background-color: lightcoral;
+}
+
+.form-close-icon {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
 }
 
 .overlay {
