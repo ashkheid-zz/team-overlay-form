@@ -7,78 +7,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./css/style.css" />
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>A Fresh Start</title>
 </head>
 
-<body id="body">
-    <div class="form-container">
-        <form action=" https://unicorn-business.io/request/" method="POST" class="req-form" id="form" onsubmit="return validateForm(document.getElementById('fullname').value);">
-            <span class="req-form__close">
-          <img
-            src="./images/close-icon.png"
-            alt="close-icon"
-            class="form-close-icon"
-            onclick="hide()"
-          />
-        </span>
+<body>
+    <!-- Create Nav Part -->
+    <nav class="navigation">
+        <ul>
+            <li>Branding</li>
+            <li>Web Design</li>
+            <li>Agency</li>
+            <li id="navigation-request" onclick="show()">Request</li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay" onclick="hide()">
 
-            <div class="req-form__full-name">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Enter your name&hellip;" autofocus onchange="ChangeColor(document.getElementById('fullname').value)" />
-            </div>
+        <!-- Create title  -->
+        <div class="titel">
+            <h1>Let's create the look and feel for your future business</h1>
+            <h5>with an idea and clarity throughout digital communication</h5>
+        </div>
+        <div class="form-container">
+            <form action=" https://unicorn-business.io/request/" method="POST" class="req-form" id="form" onsubmit="return validateForm(document.getElementById('fullname').value);">
+                <span class="req-form__close">
+                <img src="./images/close-icon.png" alt="close-icon" class="form-close-icon" onclick="hide()" />
+            </span>
 
-            <div class="req-form__phone">
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" placeholder="Enter your phone number&hellip;" />
-            </div>
-
-            <div class="req-form__email">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email&hellip;" required />
-            </div>
-
-            <div class="req-form__message">
-                <label for="message" class="req-form__message">Your Message</label>
-                <textarea id="message" name="message" placeholder="Write your message to us&hellip;" rows="5" maxlength="400"></textarea>
-            </div>
-
-            <div class="req-form__budget">
-                <p class="req-form__input-label">Budget</p>
-                <div class="req-form__select-group">
-                    <input type="radio" id="budgetChoice1" name="budget" value="$6k to $10k" checked />
-                    <label for="budgetChoice1">$6k - $10k</label>
-                    <input type="radio" id="budgetChoice2" name="budget" value="$10k to $20k" />
-                    <label for="budgetChoice2">$10k - $20k</label>
-                    <input type="radio" id="budgetChoice3" name="budget" value="over $20k" />
-                    <label for="budgetChoice3">over $20k</label>
+                <div class="req-form__full-name">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your name&hellip;" autofocus onchange="ChangeColor(document.getElementById('fullname').value)" />
                 </div>
-            </div>
 
-            <div class="req-form__newcomers">
-                <label for="newcomers">How did you know about us?</label>
-                <select id="newcomers" name="comesFrom">
-            <option value="" class="req-form__placeholder" selected>
-              Select one&hellip;
-            </option>
-            <option value="behance">Behance</option>
-            <option value="webfolw">Webfolw</option>
-            <option value="clutch">Clutch</option>
-            <option value="facebook">Facebook</option>
-            <option value="linkedin">Linkedin</option>
-            <option value="awwwards">Awwwards</option>
-            <option value="vc.ru">vc.ru</option>
-            <option value="google">Google</option>
-            <option value="catalog">Industry ratings and catalogs</option>
-            <option value="recommend">Recommendation</option>
-            <option value="other">Other&hellip;</option>
-          </select>
-            </div>
+                <div class="req-form__phone">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your phone number&hellip;" />
+                </div>
 
-            <input type="submit" value="Send" class="req-form__submit-btn" />
-        </form>
+                <div class="req-form__email">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email&hellip;" required />
+                </div>
+
+                <div class="req-form__message">
+                    <label for="message" class="req-form__message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message to us&hellip;" rows="5" maxlength="400"></textarea>
+                </div>
+
+                <div class="req-form__budget">
+                    <p class="req-form__input-label">Budget</p>
+                    <div class="req-form__select-group">
+                        <input type="radio" id="budgetChoice1" name="budget" value="$6k to $10k" checked />
+                        <label for="budgetChoice1">$6k - $10k</label>
+                        <input type="radio" id="budgetChoice2" name="budget" value="$10k to $20k" />
+                        <label for="budgetChoice2">$10k - $20k</label>
+                        <input type="radio" id="budgetChoice3" name="budget" value="over $20k" />
+                        <label for="budgetChoice3">over $20k</label>
+                    </div>
+                </div>
+
+                <div class="req-form__newcomers">
+                    <label for="newcomers">How did you know about us?</label>
+                    <select id="newcomers" name="comesFrom">
+                    <option value="" class="req-form__placeholder" selected>
+                        Select one&hellip;
+                    </option>
+                    <option value="behance">Behance</option>
+                    <option value="webfolw">Webfolw</option>
+                    <option value="clutch">Clutch</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="linkedin">Linkedin</option>
+                    <option value="awwwards">Awwwards</option>
+                    <option value="vc.ru">vc.ru</option>
+                    <option value="google">Google</option>
+                    <option value="catalog">Industry ratings and catalogs</option>
+                    <option value="recommend">Recommendation</option>
+                    <option value="other">Other&hellip;</option>
+                </select>
+                </div>
+
+                <input type="submit" value="Send" class="req-form__submit-btn" />
+            </form>
+        </div>
     </div>
-
     <!-- my scripts -->
     <script src="./js/script.js"></script>
 </body>
