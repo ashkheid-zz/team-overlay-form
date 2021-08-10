@@ -1,11 +1,14 @@
 .form-container {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   width: fit-content;
   margin: auto;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   top: 2vh;
   z-index: 999;
 

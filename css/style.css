@@ -6,52 +6,54 @@
 @import url(./_theme.css);
 @import url(./_shame.css);
 body {
-    background-color: rgb(219 222 222);
+  background-color: rgb(219 222 222);
 }
 
 .title {
-    position: absolute;
-    z-index: 0;
-    top: 30%;
-    left: 15%;
-    width: 654px;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 .title h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .title h5 {
-    font-size: 1em;
-    margin-top: 10px;
+  font-size: 1em;
+  margin-top: 10px;
 }
 
 .navigation {
-    display: flex;
-    margin-top: 10px;
-    justify-content: flex-end;
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
 }
 
 .navigation ul {
-    display: flex;
-    width: 600px;
-    list-style: none;
-    justify-content: space-evenly;
+  display: flex;
+  width: 600px;
+  list-style: none;
+  justify-content: space-evenly;
 }
 
 .navigation li:hover {
-    cursor: pointer;
-    border-bottom: solid 2px black;
+  cursor: pointer;
+  border-bottom: solid 2px black;
 }
 
 .overlay {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 900;
-    background-color: rgb(0 0 0 / 30%);
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgb(0 0 0 / 30%);
 }

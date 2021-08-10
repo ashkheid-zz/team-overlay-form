@@ -1,10 +1,10 @@
 function hide() {
-  document.getElementById("form").style.display = "none";
+  document.getElementById("form-container").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
 
 function show() {
-  document.getElementById("form").style.display = "block";
+  document.getElementById("form-container").style.display = "flex";
   document.getElementById("overlay").style.display = "block";
 }
 
