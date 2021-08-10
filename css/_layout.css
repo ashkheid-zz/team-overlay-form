@@ -7,6 +7,7 @@
   margin: auto;
   position: relative;
   top: 2vh;
+  z-index: 999;
 
   /*----test----*/
   background-color: antiquewhite;
