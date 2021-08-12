@@ -1,77 +1,75 @@
 @import url(./_hamed.css);
 @import url(./_ashkan.css);
-
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
-  background-color: rgb(219 222 222);
+    background-color: rgb(219 222 222);
 }
 
 .title {
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .title h1 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 .title h5 {
-  font-size: 1em;
-  margin-top: 10px;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 .navigation {
-  display: flex;
-  margin-top: 10px;
-  justify-content: flex-end;
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
 }
 
 .navigation ul {
-  display: flex;
-  width: 600px;
-  list-style: none;
-  justify-content: space-evenly;
+    display: flex;
+    width: 600px;
+    list-style: none;
+    justify-content: space-evenly;
 }
 
 .navigation li:hover {
-  cursor: pointer;
-  border-bottom: solid 2px black;
+    cursor: pointer;
+    border-bottom: solid 2px black;
 }
 
 .form-container {
-  /* display: flex; */
-  display: none;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 2vh;
-  z-index: 999;
-
-  /*----test----*/
-  background-color: antiquewhite;
+    /* display: flex; */
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2vh;
+    z-index: 999;
+    /*----test----*/
+    background-color: antiquewhite;
 }
 
 .req-form {
-  padding: 15px;
+    padding: 15px;
 }
 
 .req-form__phone,
@@ -80,79 +78,81 @@ body {
 .req-form__budget,
 .req-form__newcomers,
 .req-form__submit-btn {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .req-form__close,
-.req-form__full-name > *,
-.req-form__phone > *,
-.req-form__email > *,
-.req-form__message > *,
+.req-form__full-name>*,
+.req-form__phone>*,
+.req-form__email>*,
+.req-form__message>*,
 .req-form__budget,
-.req-form__newcomers > *,
+.req-form__newcomers>*,
 .req-form__submit-btn {
-  display: block;
-  width: 100%;
-  padding-block: 7px;
+    display: block;
+    width: 100%;
+    padding-block: 7px;
 }
 
 .req-form__close {
-  text-align: right;
+    text-align: right;
 }
 
 .req-form *::placeholder {
-  color: gray;
+    color: gray;
 }
 
 .req-form__select-group input {
-  display: none;
+    display: none;
 }
 
 .req-form__select-group label {
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
 }
 
-.req-form__select-group input:checked + label {
-  color: white;
-  background-color: black;
+.req-form__select-group input:checked+label {
+    color: white;
+    background-color: black;
 }
 
-.req-form__select-group input:hover + label {
-  padding: 9px;
-  border-width: 2px;
+.req-form__select-group input:hover+label {
+    padding: 9px;
+    border-width: 2px;
 }
 
 input:invalid {
-  background-color: lightcoral;
+    background-color: lightcoral;
 }
 
 .form-close-icon {
-  width: 10px;
-  height: 10px;
-  cursor: pointer;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
 }
 
 .overlay {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 900;
-  background-color: rgb(0 0 0 / 30%);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+    background-color: rgb(0 0 0 / 30%);
 }
 
+
 /*-----used for phone number validation----*/
+
 .error {
-  color: red;
-  size: 80%;
+    color: red;
+    size: 80%;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
