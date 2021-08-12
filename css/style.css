@@ -34,9 +34,13 @@ body {
 }
 
 .navigation {
-    display: flex;
-    margin-top: 10px;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  background: white;
+  padding-block: 20px;
+  box-shadow: 0 -2px 10px -5px black;
 }
 
 #navigation-request {
