@@ -64,6 +64,9 @@
             name="phone"
             placeholder="Enter your phone number&hellip;"
           />
+          <div id="phone_error" class="error hidden">
+            Please enter a valid phone number
+          </div>
         </div>
 
         <div class="req-form__email">
@@ -136,7 +139,9 @@
           </select>
         </div>
 
-        <input type="submit" value="Send" class="req-form__submit-btn" />
+        <button type="submit" class="req-form__submit-btn">
+          Submit
+        </button>
       </form>
     </div>
 

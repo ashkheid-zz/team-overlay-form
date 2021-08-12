@@ -146,3 +146,13 @@ input:invalid {
   z-index: 900;
   background-color: rgb(0 0 0 / 30%);
 }
+
+/*-----used for phone number validation----*/
+.error {
+  color: red;
+  size: 80%;
+}
+
+.hidden {
+  display: none;
+}
