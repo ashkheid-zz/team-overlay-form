@@ -133,7 +133,7 @@ footer {
   header {
     grid-column: 2 / 5;
     display: grid;
-    grid-template-columns: subgrid;
+    grid-template-columns: repeat(2, minmax(15rem, 35rem)) minmax(5rem, 10rem);gap: 2em;
   }
 
   .nav {
@@ -143,7 +143,7 @@ footer {
   main {
     grid-column: 2 / -1;
     display: grid;
-    grid-template-columns: subgrid;
+    grid-template-columns: repeat(2, minmax(15rem, 35rem)) minmax(5rem, 10rem);gap: 2em;
     grid-auto-rows: min-content;
     grid-auto-flow: dense;
   }
