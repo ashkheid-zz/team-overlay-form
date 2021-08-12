@@ -39,6 +39,10 @@ body {
     justify-content: flex-end;
 }
 
+#navigation-request {
+    border-bottom: solid 2px black;
+}
+
 .navigation ul {
     display: flex;
     width: 600px;
