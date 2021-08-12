@@ -26,6 +26,14 @@ img {
   max-width: 100%;
 }
 
+a,
+a:active,
+a:visited,
+a:focus {
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
 .btn {
   cursor: pointer;
   display: inline-block;
