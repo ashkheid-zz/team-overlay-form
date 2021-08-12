@@ -11,26 +11,26 @@ function show() {
 
 }
 
-
 //this funcation validates the phone number
 function validatePhoneNumber(input_str) {
     var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-
+    console.log(re.test(input_str));
     return re.test(input_str);
 }
 
-function validateForm(event) {
+function validateForm2(event) {
     var phone = document.getElementById("phone").value;
     if (!validatePhoneNumber(phone)) {
         document.getElementById("phone_error").classList.remove("hidden");
     } else {
         document.getElementById("phone_error").classList.add("hidden");
-
+        return false;
     }
     event.preventDefault();
 }
 
-document.getElementById("form").addEventListener("submit", validateForm);
+document.getElementById("form").addEventListener("submit", validateForm2);
+
 //phone number validation ends
 
 
@@ -56,6 +56,7 @@ function validateForm(string) {
         return false;
     } else if (fieldPhone == null || fieldPhone == "") {
         alert("فیلد تلفن نباید خالی باشد");
+
         return false;
     } else if (fieldMessage == null || fieldMessage == "") {
         alert("فیلد متن نباید خالی باشد");
@@ -87,13 +88,13 @@ function validateForm(string) {
         return false;
         alert("فرم ارسال نشد");
     } else if (check == 1) {
-
         swal({
             title: "فرم شما با موفقیت ارسال شد",
             text: "لطفاْ بر روی دکمه تایید کلیک کنید",
             icon: "success",
             button: "تایید",
         });
+
     }
 }
 
