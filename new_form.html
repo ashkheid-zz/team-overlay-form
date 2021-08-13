@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Form</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./new_form.css">
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="row">
+          <h4>User Info</h4>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Full Name" />
+            <div class="input-icon"><i class="fa fa-user"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="text" placeholder="Phone number" />
+            <div class="input-icon"><i class="fa fa-phone"></i></div>
+          </div>
+          <div class="input-group input-group-icon">
+            <input type="email" placeholder="Email Adress" />
+            <div class="input-icon"><i class="fa fa-envelope"></i></div>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Budget</h4>
+
+          <div class="input-group">
+            <input
+              id="payment-method-card"
+              type="radio"
+              name="payment-method"
+              value="card"
+              checked="true"
+            />
+            <label for="payment-method-card">
+              <span><i class="fa fa-cc-visa"></i>$6k - $10k</span>
+            </label>
+
+            <input
+              id="payment-method-paypal"
+              type="radio"
+              name="payment-method"
+              value="paypal"
+            />
+            <label for="payment-method-paypal">
+              <span><i class="fa fa-cc-paypal"></i>$10k - $20k</span>
+            </label>
+
+            <input
+              id="payment-methods-paypal"
+              type="radio"
+              name="payment-method"
+              value="paypal"
+            />
+            <label for="payment-methods-paypal">
+              <span><i class="fa fa-cc-paypal"></i>over $20k</span>
+            </label>
+          </div>
+
+          <div class="input-group input-group-icon">
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message to us&hellip;"
+              rows="5"
+              maxlength="400"
+            ></textarea>
+          </div>
+
+          <div class="input-group">
+            <select>
+              <option value="" class="req-form__placeholder" selected>
+                Select one&hellip;
+              </option>
+              <option value="behance">Behance</option>
+              <option value="webfolw">Webfolw</option>
+              <option value="clutch">Clutch</option>
+              <option value="facebook">Facebook</option>
+              <option value="linkedin">Linkedin</option>
+              <option value="awwwards">Awwwards</option>
+              <option value="vc.ru">vc.ru</option>
+              <option value="google">Google</option>
+              <option value="catalog">Industry ratings and catalogs</option>
+              <option value="recommend">Recommendation</option>
+              <option value="other">Other&hellip;</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Terms and Conditions</h4>
+          <div class="input-group">
+            <input id="terms" type="checkbox" />
+            <label for="terms"
+              >I accept the terms and conditions for signing up to this service,
+              and hereby confirm I have read the privacy policy.</label
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
