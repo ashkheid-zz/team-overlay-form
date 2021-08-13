@@ -1,38 +1,14 @@
-window.onload();
-
+//hide form
 function hide() {
     document.getElementById("form-container").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
-
+//show form
 function show() {
     document.getElementById("overlay").style.display = "block";
     document.getElementById("form-container").style.display = "block";
 
 }
-
-//this funcation validates the phone number
-function validatePhoneNumber(input_str) {
-    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-    console.log(re.test(input_str));
-    return re.test(input_str);
-}
-
-function validateForm2(event) {
-    var phone = document.getElementById("phone").value;
-    if (!validatePhoneNumber(phone)) {
-        document.getElementById("phone_error").classList.remove("hidden");
-    } else {
-        document.getElementById("phone_error").classList.add("hidden");
-        return false;
-    }
-    event.preventDefault();
-}
-
-document.getElementById("form").addEventListener("submit", validateForm2);
-
-//phone number validation ends
-
 
 //this funcation check our input boxs validation
 function validateForm(string) {
@@ -47,6 +23,7 @@ function validateForm(string) {
     var fieldName = document.forms["form"]["fullname"].value;
     var fieldPhone = document.forms["form"]["phone"].value;
     var fieldMessage = document.forms["form"]["message"].value;
+    var fieldEmail = document.forms["form"]["email"].value;
     //end of get our input boxes value***********************
     //check value of input boxes
 
@@ -61,7 +38,43 @@ function validateForm(string) {
     } else if (fieldMessage == null || fieldMessage == "") {
         alert("فیلد متن نباید خالی باشد");
         return false;
+    } else if (fieldEmail == null || fieldEmail == "") {
+        alert("فیلد ایمیل نباید خالی باشد");
+        return false;
     }
+    //check phone validation
+    if (fieldPhone != null || fieldPhone != "") {
+        const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+        const phone = document.getElementById('phone');
+        const phonerror = document.getElementById('phonerror');
+        phonerror.textContent = '';
+        if (!re.test(phone.value)) {
+            phonerror.style.color = "red";
+            phone.style.borderColor = "red";
+            phonerror.textContent = 'لطفاً یک شماره معتبر وارد کنید';
+            return false;
+        } else {
+            phonerror.textContent = '';
+            phone.style.borderColor = "green";
+        }
+    }
+    //check email validation
+    if (fieldEmail != null || fieldEmail != "") {
+        const email = document.getElementById('email');
+        const emailerror = document.getElementById('emailerror');
+        const simpleEmail = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        emailerror.textContent = '';
+        if (!simpleEmail.test(email.value)) {
+            emailerror.style.color = "red";
+            email.style.borderColor = "red";
+            emailerror.textContent = 'لطفاً یک ایمیل معتبر وارد کنید';
+            return false;
+        } else {
+            emailerror.textContent = '';
+            email.style.borderColor = "green";
+        }
+    }
+    //check name input box 
     if (strlen <= 1) {
         alert("لطفا یک عبارت معتبر وارد کنید");
         block.style.borderColor = "red";
@@ -77,12 +90,12 @@ function validateForm(string) {
     }
 
 
-
+    //reset all input boxes after send form
     var fieldName = (document.forms["form"]["fullname"].value = "");
     var fieldPhone = (document.forms["form"]["phone"].value = "");
     var fieldPhone = (document.forms["form"]["email"].value = "");
     var fieldMessage = (document.forms["form"]["message"].value = "");
-
+    //get confirm from the user to send form
     var check = confirm("آیا از صحت اطلاعات مطمين هستید؟");
     if (check == 0) {
         return false;
@@ -94,7 +107,13 @@ function validateForm(string) {
             icon: "success",
             button: "تایید",
         });
-
+        //styles to the input boxes when everthings is ok
+        email.style.borderColor = "gray";
+        email.style.border = "1px solid";
+        block.style.borderColor = "black";
+        block.style.border = "1px solid";
+        phone.style.borderColor = "black";
+        phone.style.border = "1px solid";
     }
 }
 
