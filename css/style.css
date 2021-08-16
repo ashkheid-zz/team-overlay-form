@@ -90,7 +90,7 @@ body {
     top: 2vh;
     z-index: 999;
     /*----test----*/
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
 
 .req-form {
@@ -157,6 +157,15 @@ input:invalid {
     width: 10px;
     height: 10px;
     cursor: pointer;
+}
+
+.req-form__submit-btn {
+    border: 0;
+    color: white;
+    background-color: black;
+    padding: 9px;
+    border-width: 2px;
+    border-radius: 5px;
 }
 
 .overlay {
