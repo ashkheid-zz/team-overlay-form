@@ -89,8 +89,8 @@ body {
     right: 0;
     top: 2vh;
     z-index: 999;
-    /*----test----*/
-    /* background-color: antiquewhite; */
+    background-color: white;
+    box-shadow: 0 0 8px rgb(0 0 0 / 25%);
 }
 
 .req-form {
